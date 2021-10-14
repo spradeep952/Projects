@@ -1,0 +1,5 @@
+1. I forgot to add the templates directory in settings.py file's templates_dirs and because of that I was getting TemplateDoesNotFound Exception. Because Django didn't know where the file were the template files kept.
+Solution - Don't forget to add you templates directory in settings.py file's Templates-> Dirs list.
+add os.path.join(BASE_DIRS, '<YourAppName>/templates'), 
+
+2. 
