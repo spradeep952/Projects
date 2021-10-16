@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To Do App</title>
+</head>
+<body>
+    <h1>To Do App</h1>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Title</td>
+            <td>Created At</td>
+            <td>Action</td>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td>{{ task.id }}</td>
+            <td>{{ task.title }}</td>
+            <td>{{ task.date_created}}</td>
+            <td><a href="{% url 'modify-task' task.id %}">Modify</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

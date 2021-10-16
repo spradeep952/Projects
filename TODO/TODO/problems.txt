@@ -2,4 +2,8 @@
 Solution - Don't forget to add you templates directory in settings.py file's Templates-> Dirs list.
 add os.path.join(BASE_DIRS, '<YourAppName>/templates'), 
 
-2. 
+2. I was having problem in including the app urls.. like distinguishing the urls for different apps. So here we can make us of the
+  from django.urls import include
+  path('', include('<appname>.urls'))
+  and then you make your own url patterns based on the app
+
